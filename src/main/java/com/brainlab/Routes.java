@@ -50,7 +50,7 @@ class Routes {
         }
         // Otherwise return 0
         else {
-            jo.put("sum", 0);
+            jo.put("sum", Double.NaN);
             ctx.json(jo);
         }
     }

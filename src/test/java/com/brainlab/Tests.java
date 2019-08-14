@@ -28,13 +28,13 @@ public class Tests {
     @Test
     public void noOperands1() {
         given().when().get("/calculator/add")
-                .then().body(containsString("{\"sum\":0}"));
+                .then().body(containsString("{\"sum\":\"NaN\"}"));
     }
 
     @Test
     public void noOperands2() {
         given().when().get("/calculator/add?operands=")
-                .then().body(containsString("{\"sum\":0}"));
+                .then().body(containsString("{\"sum\":\"NaN\"}"));
     }
 
     @Test
